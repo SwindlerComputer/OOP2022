@@ -2,16 +2,16 @@ package ie.tudublin;
 
 import processing.core.*;
 import processing.data.*;
-import ddf.minim.*;
 import java.util.ArrayList;
 import ddf.minim.AudioInput;
+import ddf.minim.*;
 import ddf.minim.analysis.FFT;
 
 public class ScreenUI extends PApplet {
     Button nextButton;
     Button pauseButton;
     Button prevButton;
-    // Sphere sphere;
+    Sphere sphere;
     Radar r;
     IOBox iob;
     Logo logo;
@@ -72,7 +72,7 @@ public class ScreenUI extends PApplet {
         nextButton = new Button(this, 50, height * 0.6f, 100, 50, "Next");
         pauseButton = new Button(this, 300, height * 0.6f, 100, 50, "Play/Pause");
         prevButton = new Button(this, 500, height * 0.6f, 100, 50, "Prev");
-        // sphere = new Sphere(this, 500, height * 0.6f, 500, 500);
+        sphere = new Sphere(this, 500, height * 0.6f, 500, 500);
         r = new Radar(this, width / 2, height / 2, 350);
         iob = new IOBox(this, (width / 2) - 250, height * 0.8f, 500, 200);
         logo = new Logo(this, 0, 0, width, height / 5, "Space Drift");
@@ -121,6 +121,7 @@ public class ScreenUI extends PApplet {
             jukeboxPlay();
         }
 
+        
     }
 
     public void loadData() {
@@ -187,7 +188,8 @@ public class ScreenUI extends PApplet {
         nextButton.render();
         prevButton.render();
         pauseButton.render();
-        // sphere.render();
+        sphere.render();
+
 
         r.render();
         r.update();
@@ -218,5 +220,4 @@ public class ScreenUI extends PApplet {
             line(i + gap, middle, i + gap, middle + ai.left.get(i) * middle / 6);
         }
     }
-
 }
