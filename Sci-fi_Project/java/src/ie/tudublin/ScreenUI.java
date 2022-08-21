@@ -121,6 +121,7 @@ public class ScreenUI extends PApplet {
             jukeboxPlay();
         }
 
+        
     }
 
     public void loadData() {
@@ -188,6 +189,7 @@ public class ScreenUI extends PApplet {
         prevButton.render();
         pauseButton.render();
         sphere.render();
+
 
         r.render();
         r.update();
