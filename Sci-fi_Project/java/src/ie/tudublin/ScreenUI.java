@@ -13,7 +13,7 @@ public class ScreenUI extends PApplet {
     Button prevButton;
     Radar r;
     IOBox iob;
-    Logo logo;
+    // Logo logo;
     boolean[] keys = new boolean[1024];
     IOBox iob2;
 
@@ -62,6 +62,7 @@ public class ScreenUI extends PApplet {
         tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track9.mp3"));
         tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track10.mp3"));
         tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track11.mp3"));
+
         tracklists.get(jukebox).play();
 
         PFont fnt = createFont("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/HADES.otf", 40);
@@ -72,7 +73,7 @@ public class ScreenUI extends PApplet {
         prevButton = new Button(this, 500, height * 0.6f, 100, 50, "Prev");
         r = new Radar(this, width / 2, height / 2, 350);
         // iob = new IOBox(this, (width / 2) - 250, height * 0.8f, 500, 200);
-        logo = new Logo(this, 0, 0, width, height / 5, "Space Drift");
+        // logo = new Logo(this, 0, 0, width, height / 5, "Space Drift");
         iob2 = new IOBox(this, width - 540, height * 0.8f, 500, 200);
 
         for (int i = 0; i <= 5; i++)
@@ -183,7 +184,7 @@ public class ScreenUI extends PApplet {
 
         iob2.render();
 
-        logo.render();
+        // logo.render();
 
         ellipse(mouseX, mouseY, 40, 40);
         ellipse(mouseX, mouseY, 1, 1);
