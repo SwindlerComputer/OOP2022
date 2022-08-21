@@ -52,21 +52,21 @@ public class ScreenUI extends PApplet {
 
     public void setup() {
 
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track1.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track2.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track3.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track4.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track5.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track6.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track7.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track8.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track9.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track10.mp3"));
-        tracklists.add(minim.loadFile("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/track11.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track1.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track2.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track3.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track4.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track5.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track6.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track7.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track8.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track9.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track10.mp3"));
+        tracklists.add(minim.loadFile("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/track11.mp3"));
 
         tracklists.get(jukebox).play();
 
-        PFont fnt = createFont("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/HADES.otf", 40);
+        PFont fnt = createFont("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/HADES.otf", 40);
         textFont(fnt);
 
         nextButton = new Button(this, 50, height * 0.6f, 100, 50, "Next");
@@ -121,11 +121,10 @@ public class ScreenUI extends PApplet {
             jukeboxPlay();
         }
 
-        
     }
 
     public void loadData() {
-        Table table = loadTable("/Users/emekaude/Documents/Assign/Sci-fi_Project/java/data/weapons.csv", "header");
+        Table table = loadTable("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/weapons.csv", "header");
 
         for (TableRow row : table.rows()) {
             Weapon w = new Weapon(row);
@@ -189,7 +188,6 @@ public class ScreenUI extends PApplet {
         prevButton.render();
         pauseButton.render();
         sphere.render();
-
 
         r.render();
         r.update();
