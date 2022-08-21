@@ -1,15 +1,16 @@
 package ie.tudublin;
-
 import processing.core.*;
 
-public class Sphere {
+public class Sphere
+{
     ScreenUI ui;
     private float x;
     private float y;
     private float width;
     private float height;
 
-    public Sphere(ScreenUI ui, float x, float y, float width, float height) {
+    public Sphere(ScreenUI ui, float x, float y, float width, float height)
+    {
         this.ui = ui;
         this.x = x;
         this.y = y;
@@ -17,16 +18,18 @@ public class Sphere {
         this.height = height;
     }
 
-    public void render() {
+
+    public void render()
+    {
         float w = width;
         float h = height;
-        // ui.size(600, 600);
+        ui.size(600, 600);
         ui.fill(255);
         ui.lights();
         ui.translate(w / 2, h / 2);
         ui.sphere(200);
 
-    }
+    }  
 
     /**
      * @return the ui
