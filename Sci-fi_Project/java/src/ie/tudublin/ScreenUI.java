@@ -25,7 +25,6 @@ public class ScreenUI extends PApplet {
 
     public int jukebox = 0;
 
-    private ArrayList<Weapon> weapons = new ArrayList<Weapon>();
     public ArrayList<Sprite> sprites = new ArrayList<Sprite>();
     private ArrayList<AudioPlayer> tracklists = new ArrayList<AudioPlayer>();
 
@@ -71,8 +70,6 @@ public class ScreenUI extends PApplet {
         pauseButton = new Button(this, 300, height * 0.6f, 100, 50, "Play/Pause");
         prevButton = new Button(this, 500, height * 0.6f, 100, 50, "Prev");
         r = new Radar(this, width / 2, height / 2, 350);
-        // iob = new IOBox(this, (width / 2) - 250, height * 0.8f, 500, 200);
-        // logo = new Logo(this, 0, 0, width, height / 5, "Space Drift");
         iob2 = new IOBox(this, width - 540, height * 0.8f, 500, 200);
 
         for (int i = 0; i <= 5; i++)
@@ -81,7 +78,7 @@ public class ScreenUI extends PApplet {
         for (int i = 0; i <= 100; i++)
             sprites.add(new Star(this));
 
-        loadData();
+        // loadData();
     }
 
     public void mousePressed() {
@@ -118,31 +115,6 @@ public class ScreenUI extends PApplet {
         }
 
     }
-
-    public void loadData() {
-        Table table = loadTable("/Users/emekaude/Documents/OOP2022/Sci-fi_Project/java/data/weapons.csv", "header");
-
-        for (TableRow row : table.rows()) {
-            Weapon w = new Weapon(row);
-            weapons.add(w);
-        }
-    }
-
-    // public void drawWeapons() {
-    // int i = 0;
-    // textSize(20);
-    // textAlign(LEFT, CENTER);
-    // for (Weapon w : weapons) {
-    // text("Weapon Name: " + w.getWeaponName(), (width / 2) - 100, height * 0.81f);
-    // text("Mag Size: " + w.getMagSize(), (width / 2) - 100, height * 0.84f);
-    // text("Damage: " + w.getDamage(), (width / 2) - 100, height * 0.87f);
-    // text("Description: " + w.getDesc(), (width / 2) - 100, height * 0.9f);
-
-    // i++;
-    // if (i == 1)
-    // break;
-    // }
-    // }
 
     public void jukeboxPlay() {
 
@@ -182,8 +154,6 @@ public class ScreenUI extends PApplet {
         r.update();
 
         iob2.render();
-
-        // logo.render();
 
         ellipse(mouseX, mouseY, 40, 40);
         ellipse(mouseX, mouseY, 1, 1);
