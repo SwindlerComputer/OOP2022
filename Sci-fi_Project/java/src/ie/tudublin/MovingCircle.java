@@ -33,7 +33,7 @@ public class MovingCircle {
             ui.fill(50, rand, rand);
         else
             ui.fill(rand);
-        // Static field
+
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.textSize(15);
         ui.text("I am a moving circle", x, y);
