@@ -14,7 +14,7 @@ public class Planet extends Sprite {
 
     @Override
     public void update() {
-        // pos =+ forward * speed;
+
         pos.add(PVector.mult(forward, speed));
         rotation += 0.012f;
 

@@ -19,9 +19,9 @@ public class IOBox {
     }
 
     public void render() {
-        ui.stroke(33, 157, 150);
+        ui.stroke(33, 160, 150);
         ui.noFill();
 
-        ui.rect(x,y,boxWidth,boxHeight);
+        ui.rect(x, y, boxWidth, boxHeight);
     }
 }

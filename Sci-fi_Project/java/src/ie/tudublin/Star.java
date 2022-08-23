@@ -32,7 +32,7 @@ public class Star extends Sprite {
 
     @Override
     public void update() {
-        // pos =+ forward * speed;
+
         pos.add(PVector.mult(forward, speed));
         rotation += 0.01f;
 
