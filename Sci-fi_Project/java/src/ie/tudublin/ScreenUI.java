@@ -13,7 +13,6 @@ public class ScreenUI extends PApplet {
     Button prevButton;
     Radar r;
     IOBox iob;
-    // Logo logo;
     boolean[] keys = new boolean[1024];
     IOBox iob2;
 
