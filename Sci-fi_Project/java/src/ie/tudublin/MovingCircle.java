@@ -23,12 +23,14 @@ public class MovingCircle {
     }
 
     public void render() {
+
         if (hit == -1) {
             ui.stroke(50, rand, rand);
         } else
             ui.stroke(rand);
         ui.noFill();
         ui.ellipse(x, y, diameter, diameter);
+
         if (hit == -1)
             ui.fill(50, rand, rand);
         else
@@ -43,6 +45,7 @@ public class MovingCircle {
     public void update() {
         x += dx;
         y += dy;
+
         if ((x > ui.width - radius) || (x < radius)) {
             dx *= -1;
             hit *= -1;

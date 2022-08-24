@@ -78,7 +78,6 @@ public class ScreenUI extends PApplet {
         for (int i = 0; i <= 100; i++)
             sprites.add(new Star(this));
 
-        // loadData();
     }
 
     public void mousePressed() {
